@@ -11,7 +11,7 @@ public class DriverFinder {
         for (Driver driver : drivers) {
             if (driver.isAvailable()) {
                 // calculate distance, compare, possibly update bestDriver and smallestDistanceFound
-                double correctDistance = DistanceCalculator.distance(driver.getX(), driver.getY(),rider.getX(), rider.getY());
+                double correctDistance = DistanceCalculator.distance(driver.getX(), driver.getY(),rider.x(), rider.y());
                 if(correctDistance < smallestDistanceFound) {
                     smallestDistanceFound = correctDistance;
 
@@ -21,8 +21,6 @@ public class DriverFinder {
             }
 
         }
-
-
 
         return bestDriver;
 
